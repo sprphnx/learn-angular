@@ -1,0 +1,13 @@
+<div class="mb-10">
+  <input type="text" (input)="getServerName($event)" />
+</div>
+<button
+  class="btn btn-primary"
+  [disabled]="!allowNewServer"
+  (click)="onClickAddServer()"
+>
+  Add server
+</button>
+<p>{{ serverCreationMessage }}</p>
+<app-server></app-server>
+<app-server></app-server>
