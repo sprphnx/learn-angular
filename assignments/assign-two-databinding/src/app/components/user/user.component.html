@@ -1,0 +1,19 @@
+<div class="form-group">
+  <label for="exampleInputEmail1">Username:</label>
+  <input
+    type="text"
+    class="form-control"
+    placeholder="Enter username"
+    [(ngModel)]="username"
+  />
+  <small id="emailHelp" class="form-text text-muted">
+    The username: {{ username }}</small
+  >
+</div>
+<button
+  class="btn btn-primary"
+  [disabled]="isUsernameEmtpy()"
+  (click)="clearUsername()"
+>
+  Reset
+</button>
