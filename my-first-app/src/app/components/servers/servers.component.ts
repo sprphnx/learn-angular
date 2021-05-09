@@ -9,6 +9,7 @@ export class ServersComponent implements OnInit {
   allowNewServer: boolean = false;
   serverCreationMessage: string = 'No server was created';
 
+  serverName: string = '';
   serverCount: number = 1;
 
   constructor() {
@@ -18,10 +19,14 @@ export class ServersComponent implements OnInit {
   ngOnInit(): void {}
 
   onClickAddServer() {
-    this.serverCreationMessage = this.serverCount++ + ' Server created!!!';
+    this.serverCreationMessage =
+      'Server created with name ' + this.serverName + ' !!!';
   }
 
-  getServerName(event) {
-    console.log(event);
-  }
+  // Method used in the case of event binding in HTML Template
+  // getServerName(event: Event) {
+  //   console.log(event);
+  //   this.serverName = (<HTMLInputElement>event.target).value;
+  //   console.log(this.serverName);
+  // }
 }

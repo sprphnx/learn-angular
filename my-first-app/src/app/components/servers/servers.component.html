@@ -1,6 +1,13 @@
-<div class="mb-10">
+<!-- Example of event binding -->
+<!-- <div class="mb-10">
   <input type="text" (input)="getServerName($event)" />
+</div> -->
+
+<!-- Example of property binding -->
+<div class="mb-10">
+  <input type="text" [(ngModel)]="serverName" />
 </div>
+
 <button
   class="btn btn-primary"
   [disabled]="!allowNewServer"
